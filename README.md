@@ -20,7 +20,7 @@ npm run build
 npm run preview
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser.
+Open [https://currency-xchang.netlify.app/](http://currency-xchang.netlify.app) in your browser.
 
 ---
 
@@ -58,11 +58,11 @@ currency-converter/
 
 ## 📄 Pages & Routing
 
-| Route | Component | Description |
-|---|---|---|
-| `/` | `Converter.tsx` | Convert between any two currencies with live rates |
-| `/rates` | `Rates.tsx` | Live rates table, switchable base currency, search filter |
-| `/history` | `History.tsx` | Saved conversions with delete and clear all options |
+| Route      | Component       | Description                                               |
+| ---------- | --------------- | --------------------------------------------------------- |
+| `/`        | `Converter.tsx` | Convert between any two currencies with live rates        |
+| `/rates`   | `Rates.tsx`     | Live rates table, switchable base currency, search filter |
+| `/history` | `History.tsx`   | Saved conversions with delete and clear all options       |
 
 ---
 
@@ -70,8 +70,8 @@ currency-converter/
 
 Uses the **[Open Exchange Rates API](https://open.er-api.com)** — completely free with no API key required.
 
-| Function | Endpoint | Description |
-|---|---|---|
+| Function           | Endpoint               | Description                               |
+| ------------------ | ---------------------- | ----------------------------------------- |
 | `fetchRates(base)` | `GET /v6/latest/:base` | Fetch all rates for a given base currency |
 
 All API logic lives in `src/utils/api.ts`. Rate fetching and caching is handled by the `useRates` custom hook in `src/hooks/useRates.ts`.
@@ -96,15 +96,15 @@ All API logic lives in `src/utils/api.ts`. Rate fetching and caching is handled 
 The `useRates(base)` hook handles all data fetching logic:
 
 ```ts
-const { rates, loading, error, refetch } = useRates('USD')
+const { rates, loading, error, refetch } = useRates("USD");
 ```
 
-| Return value | Type | Description |
-|---|---|---|
-| `rates` | `ExchangeRates or null` | The fetched rates object |
-| `loading` | `boolean` | True while fetching |
-| `error` | `string or null` | Error message if fetch failed |
-| `refetch` | `() => void` | Manually trigger a fresh fetch |
+| Return value | Type                    | Description                    |
+| ------------ | ----------------------- | ------------------------------ |
+| `rates`      | `ExchangeRates or null` | The fetched rates object       |
+| `loading`    | `boolean`               | True while fetching            |
+| `error`      | `string or null`        | Error message if fetch failed  |
+| `refetch`    | `() => void`            | Manually trigger a fresh fetch |
 
 Caching is handled in-memory with a 10-minute TTL per base currency — switching back to a previously loaded currency is instant.
 
@@ -112,14 +112,14 @@ Caching is handled in-memory with a 10-minute TTL per base currency — switchin
 
 ## 🛠 Tech Stack
 
-| Tool | Purpose |
-|---|---|
-| React 19 | UI framework |
-| TypeScript | Type safety |
-| React Router 7 | Client-side routing |
-| Vite | Build tool & dev server |
-| localStorage | Conversion history persistence |
-| Google Fonts | Typography (Syne + DM Sans) |
+| Tool           | Purpose                        |
+| -------------- | ------------------------------ |
+| React 19       | UI framework                   |
+| TypeScript     | Type safety                    |
+| React Router 7 | Client-side routing            |
+| Vite           | Build tool & dev server        |
+| localStorage   | Conversion history persistence |
+| Google Fonts   | Typography (Syne + DM Sans)    |
 
 ---
 
