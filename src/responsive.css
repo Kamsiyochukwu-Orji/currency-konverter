@@ -1,0 +1,439 @@
+/* ============================================================
+   CONVERTO — RESPONSIVE MEDIA QUERIES
+   Breakpoints:
+     xl:  1280px and below  (large laptops)
+     lg:  1024px and below  (small laptops / landscape tablets)
+     md:   768px and below  (tablets / large phones)
+     sm:   480px and below  (phones)
+     xs:   360px and below  (small phones)
+   ============================================================ */
+
+/* ── LARGE LAPTOPS (≤ 1280px) ──────────────────────────── */
+@media (max-width: 1280px) {
+  .converter-page,
+  .rates-page,
+  .history-page {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ── SMALL LAPTOPS / LANDSCAPE TABLETS (≤ 1024px) ─────── */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 1.25rem;
+  }
+
+  .converter-page {
+    max-width: 560px;
+  }
+
+  .rates-page,
+  .history-page {
+    max-width: 640px;
+  }
+
+  .rates-table-head,
+  .rates-table-row {
+    grid-template-columns: 70px 1fr 120px;
+    padding: 10px 14px;
+  }
+}
+
+/* ── TABLETS / LARGE PHONES (≤ 768px) ──────────────────── */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 1rem;
+    height: 54px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+
+  .nav-link {
+    padding: 5px 10px;
+    font-size: 13px;
+  }
+
+  /* Pages */
+  .converter-page,
+  .rates-page,
+  .history-page {
+    max-width: 100%;
+    padding: 1.75rem 1.25rem;
+  }
+
+  /* Converter hero */
+  .converter-hero h1 {
+    font-size: 1.65rem;
+  }
+
+  /* Converter card */
+  .converter-card {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  /* Currency row — stack on tablet */
+  .currency-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .swap-btn {
+    width: 100%;
+    justify-content: center;
+    height: 40px;
+  }
+
+  /* Result box */
+  .result-value {
+    font-size: 22px;
+  }
+
+  .result-amount {
+    font-size: 17px;
+  }
+
+  /* Actions */
+  .converter-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Rates page */
+  .rates-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .rates-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .rates-controls {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .rates-table-head,
+  .rates-table-row {
+    grid-template-columns: 65px 1fr 110px;
+    padding: 10px 12px;
+  }
+
+  .currency-name {
+    font-size: 13px;
+  }
+
+  /* History page */
+  .history-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .history-header h1 {
+    font-size: 1.65rem;
+  }
+
+  .btn-danger {
+    width: 100%;
+    text-align: center;
+  }
+
+  .history-card {
+    padding: 0.875rem 1rem;
+  }
+
+  .h-amount,
+  .h-result {
+    font-size: 14px;
+  }
+
+  .history-meta {
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+/* ── PHONES (≤ 480px) ───────────────────────────────────── */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 0.875rem;
+    height: 52px;
+  }
+
+  .brand-icon {
+    font-size: 17px;
+  }
+
+  .brand-name {
+    font-size: 15px;
+  }
+
+  .nav-link {
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+
+  /* Pages */
+  .converter-page,
+  .rates-page,
+  .history-page {
+    padding: 1.25rem 0.875rem;
+  }
+
+  /* Converter hero */
+  .converter-hero {
+    margin-bottom: 1.25rem;
+  }
+
+  .converter-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .converter-hero p {
+    font-size: 13px;
+  }
+
+  /* Converter card */
+  .converter-card {
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 0.875rem;
+  }
+
+  /* Amount input */
+  .amount-input {
+    font-size: 17px;
+    padding: 10px 12px;
+  }
+
+  /* Select dropdowns */
+  select {
+    font-size: 13px;
+    padding: 9px 12px;
+    padding-right: 28px;
+  }
+
+  /* Result box */
+  .result-box {
+    padding: 1rem 1.125rem;
+  }
+
+  .result-value {
+    font-size: 20px;
+  }
+
+  .result-amount {
+    font-size: 15px;
+  }
+
+  .result-eq {
+    font-size: 14px;
+  }
+
+  .result-from,
+  .result-to {
+    font-size: 12px;
+  }
+
+  .result-rate {
+    font-size: 11px;
+  }
+
+  /* Rates page */
+  .rates-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .rates-table-head,
+  .rates-table-row {
+    grid-template-columns: 55px 1fr 100px;
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+
+  .currency-code {
+    font-size: 12px;
+  }
+
+  .currency-name {
+    font-size: 12px;
+  }
+
+  .currency-rate {
+    font-size: 12px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  /* History page */
+  .history-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .history-card {
+    padding: 0.75rem 0.875rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .remove-btn {
+    align-self: flex-end;
+    margin-top: -0.5rem;
+  }
+
+  .h-amount,
+  .h-result {
+    font-size: 13px;
+  }
+
+  .history-conversion {
+    gap: 6px;
+  }
+
+  .history-empty {
+    padding: 3rem 1rem;
+  }
+
+  .empty-icon {
+    font-size: 2rem;
+  }
+
+  .history-empty p {
+    font-size: 14px;
+  }
+}
+
+/* ── SMALL PHONES (≤ 360px) ─────────────────────────────── */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 0 0.75rem;
+  }
+
+  .brand-name {
+    font-size: 14px;
+  }
+
+  .nav-link {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+
+  .converter-page,
+  .rates-page,
+  .history-page {
+    padding: 1rem 0.75rem;
+  }
+
+  .converter-hero h1,
+  .rates-header h1,
+  .history-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .converter-card {
+    padding: 0.875rem;
+  }
+
+  .amount-input {
+    font-size: 15px;
+    padding: 9px 10px;
+  }
+
+  .result-value {
+    font-size: 18px;
+  }
+
+  .rates-table-head,
+  .rates-table-row {
+    grid-template-columns: 48px 1fr 90px;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .h-amount,
+  .h-result {
+    font-size: 12px;
+  }
+}
+
+/* ── LANDSCAPE PHONES ───────────────────────────────────── */
+@media (max-width: 768px) and (orientation: landscape) {
+  .converter-page,
+  .rates-page,
+  .history-page {
+    padding: 1rem 1.25rem;
+  }
+
+  .converter-hero {
+    margin-bottom: 1rem;
+  }
+
+  .converter-hero h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Keep currency row side by side in landscape */
+  .currency-row {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .swap-btn {
+    width: auto;
+    flex-shrink: 0;
+  }
+
+  /* Actions side by side in landscape */
+  .converter-actions {
+    flex-direction: row;
+  }
+
+  .rates-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── LARGE SCREENS (≥ 1440px) ───────────────────────────── */
+@media (min-width: 1440px) {
+  .converter-page {
+    max-width: 660px;
+  }
+
+  .rates-page,
+  .history-page {
+    max-width: 800px;
+  }
+
+  .converter-hero h1 {
+    font-size: 2.4rem;
+  }
+
+  .result-value {
+    font-size: 30px;
+  }
+
+  .rates-table-head,
+  .rates-table-row {
+    grid-template-columns: 100px 1fr 160px;
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
